@@ -1,0 +1,13 @@
+{
+    "manifest_version": 1,
+  
+    "name": "Speech Assist",
+    "description": "Text To Speech (TTS) Converter",
+    "version": "1.0.0",
+    "icons": { "128": "./assets/img/icon_128.png" },
+    "browser_action": {
+      "default_icon": "./assets/img/icon.png",
+      "default_popup": "popup.html"
+    },
+    "permissions": ["activeTab"]
+}
