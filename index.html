@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<!-- head -->
+<head>
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.1/css/materialize.min.css">
+    <!-- Font Awesome -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Styles CSS -->
+    <link rel="stylesheet" href="./styles.css">
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.1/js/materialize.min.js"></script>
+</head>
+
+<!-- Body -->
+<body>
+
+    <!-- Main Container -->
+    <div class="container cnt">
+        <!-- Row -->
+        <div class="row">
+            <!-- nav -->
+            <nav>
+                <!-- nav wrapper -->
+                <div class="nav-wrapper">
+                    <!-- Speech Assist -->
+                    <div class="col s12 brand-logo brand-name">Speech Assist</div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Form -->
+        <form class="col s8 offset-s2">
+            <!-- Choose Voice -->
+            <div class="row">
+                <label>Choose voice</label>
+                <select id="voices"></select>
+            </div>
+            <!-- Row -->
+            <div class="row">
+                <!-- Set Rate -->
+                <div class="col s6">
+                    <label>Rate</label>
+                    <p class="range-field">
+                        <input type="range" id="rate" min="1" max="100" value="10" />
+                    </p>
+                </div>
+                <!-- Set Pitch -->
+                <div class="col s6">
+                    <label>Pitch</label>
+                    <p class="range-field">
+                        <input type="range" id="pitch" min="0" max="2" value="1" />
+                    </p>
+                </div>
+                <!-- Notify Rate and Pitch Support -->
+                <div class="col s12">
+                    <p>N.B. Rate and Pitch only work with native voice.</p>
+                </div>
+            </div>
+            <!-- Row -->
+            <div class="row">
+                <!-- Message / Text Field -->
+                <div class="input-field col s12">
+                    <textarea id="message" class="materialize-textarea"></textarea>
+                    <label>Write text</label>
+                </div>
+            </div>
+            <!-- Speak Button -->
+            <a href="#" id="speak" class="waves-effect waves-light btn">Speak</a>
+        </form>  
+        
+        <!-- Footer -->
+        <footer>
+            <!-- Footer Contents -->
+            <div class="footer-contents">
+                <p>v1.0
+                    | <a href="https://github.com/adisakshya/speech-assist">Fork on Github</a>
+                    | <a href="https://github.com/adisakshya/speech-assist/issues">Suggest a Feature</a>
+                    | <a href="https://github.com/adisakshya/speech-assist/issues">Report Issues</a>
+                    | <a href="https://adisakshya.github.io">Author</a>
+                </p>
+
+                <!-- Made with love tag -->
+                <span>
+                    Made with <i class="fa fa-heart fa-1x fa-beat heart"></i> in India
+                </span>
+            </div>
+        </footer>
+
+    </div>
+
+    <div id="modal1" class="modal">
+        <h4>Speech Synthesis not supported</h4>
+        <p>Your browser does not support speech synthesis.</p>
+        <div class="action-bar">
+            <a href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Close</a>
+        </div>
+    </div>
+    
+    <script src='./speech_assist.js'></script>
+</body>
+
+</html>
